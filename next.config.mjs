@@ -8,6 +8,16 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+  },
+  trailingSlash: true,
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/app',
+        permanent: true,
+      },
+    ]
   }
 }
 
